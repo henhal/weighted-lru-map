@@ -3,7 +3,7 @@ import {LRUMap} from 'lru_map';
 /**
  * A function calculating the weight of a value. It's not recommended to ever use weights of 0.
  */
-export type WeightFunction<V, K> = (value: V, key: K) => number;
+export type WeightFunction<K, V> = (value: V, key: K) => number;
 
 /**
  * A LRU map with eviction based on the combined item weight in addition to the number of items (=size).
@@ -27,7 +27,7 @@ export default class WeightedLruMap<K, V> extends LRUMap<K, V> {
    * @param [entries] Initial entries
    */
   constructor(
-      private readonly getWeight: WeightFunction<V, K>,
+      private readonly getWeight: WeightFunction<K, V>,
       readonly weightLimit: number,
       limit = Number.MAX_VALUE,
       entries?: Iterable<[K,V]>
