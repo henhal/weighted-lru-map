@@ -1,0 +1,22 @@
+{
+  "name": "weighted-lru-map",
+  "version": "1.0.0",
+  "description": "A LRU map supporting eviction based on calculated item weight",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "git@github.com:henhal/weighted-lru-map.git",
+  "author": "Henrik Hall",
+  "license": "Apache 2.0",
+  "private": false,
+  "dependencies": {
+    "lru_map": "^0.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.3"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "prepublish": "npm run clean && npm run build"
+  }
+}
