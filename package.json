@@ -1,6 +1,6 @@
 {
   "name": "weighted-lru-map",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A LRU map supporting eviction based on calculated item weight",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
