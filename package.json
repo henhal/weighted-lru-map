@@ -18,5 +18,8 @@
     "clean": "rm -rf dist",
     "build": "tsc",
     "prepublish": "npm run clean && npm run build"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
